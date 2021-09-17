@@ -1,0 +1,180 @@
+*
+{
+	
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+
+}
+
+body
+{
+	
+	color: black;
+	background-color: white;
+	font-family: "Arial";
+	overflow-x: hidden;
+
+}
+
+main
+{
+	width: 100%;
+
+}
+
+h1{
+	font-size: xx-large;
+}
+
+h2
+{
+	padding: 10px 0%;
+}
+
+a{
+	color:  #18453B;
+}
+
+.Collums{
+	
+	display: inline-flex;
+	padding: 0px 2%;
+	width: 100%;
+}
+.Collums2{
+	
+	display: inline-flex;
+	width: 100%;
+}
+
+.gallery
+{
+	width: 500px; 
+	height: 400px; 
+	align-items: center; 
+	padding: 20px 0%;
+}
+
+/* [ON BIG SCREEN] */
+/* (A) WRAPPER */
+#hamnav {
+	width: 100%;	
+	background: #18453B;
+	position:sticky;
+	position: fixed;
+	z-index: 3;
+	top:0;
+  }
+  
+  /* (B) HORIZONTAL MENU ITEMS */
+  #hamitems { display: flex; align-items: center;}
+  #hamitems a {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 55px; 
+	flex-grow: 1;
+	flex-basis: 0;
+	padding: 0px 20px;
+	color: white;
+	text-decoration: none;
+	text-align: center;
+	
+  }
+  #hamitems a:hover { color: #18453B; background-color:white; }
+  
+  /* (C) HIDE HAMBURGER */
+  #hamnav label, #hamburger { display: none;}
+
+/* [ON SMALL SCREENS] */
+@media screen and (max-width: 768px){
+	/* (A) BREAK INTO VERTICAL MENU */
+	#hamitems a {
+	  align-items: center;
+	  box-sizing: border-box;
+	  display: flex;
+	  width: 100%;
+	  border-top: 0px;
+	}
+	/* (B) SHOW HAMBURGER ICON */
+	#hamnav label { 
+	  display: inline-block; 
+	  color: white;
+	  background: #18453B;
+	  font-style: normal;
+	  font-size: 1.2em;
+	  padding: 0px 20px;
+	  height: 55px; 
+	  display: flex;
+	  align-items: center;
+	}
+  
+	/* (C) TOGGLE SHOW/HIDE MENU */
+	#hamitems { display: none; }
+	#hamnav input:checked ~ #hamitems { display: block; }
+
+	.Collums{
+		display: block;
+	}
+	.gallery{
+		width: 250px;
+		height: 200px; 
+	}
+  }
+
+.container
+{
+	position: relative;
+	text-align: center;
+	color: white;
+}
+
+.centered {
+	
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width:100%;
+	padding: 10px 10%;
+}
+
+.centerText
+{
+	justify-content: center;
+	text-align: center;
+	padding: 20px 15%;
+}
+.leftText
+{
+	justify-content: center;
+	text-align: left;
+	padding: 20px 2%;
+
+}
+
+
+.footerText
+{
+	justify-content: center;
+	text-align: right;
+	padding: 7px 1%;
+	color: #3d5a54;
+}
+
+
+
+
+/*
+footer 
+{
+	position:sticky;
+	position: fixed;
+	z-index: 3;
+	bottom: 0;
+	width: 100%;
+	height: 30px;
+	background-color: #18453B;
+	
+}*/
